@@ -19,4 +19,4 @@ def contact_page(request):
         "title": "Página de contato",
         "content": "Bem-vindo à página de contato"
     }
-    return render(request, "about/view.html", context)
+    return render(request, "contact/view.html", context)
