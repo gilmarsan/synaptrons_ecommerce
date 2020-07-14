@@ -22,16 +22,16 @@ def product_list_view(request):
     }
     return render(request, "products/list.html", context)
 
-    #Class Based View
-    class ProductDetailView(DetailView):
-        #traz todos os produtos do banco de dados sem filtrar nada
-        queryset = Product.objects.all()
-        template_name = "products/detail.html"
+#Class Based View
+class ProductDetailView(DetailView):
+    #traz todos os produtos do banco de dados sem filtrar nada
+    queryset = Product.objects.all()
+    template_name = "products/detail.html"
 
-    #Function Based View
-    def product_detail_view(request):
-        queryset = Product.objects.all()
-        context = {
-            'object_list': queryset
-        }
-        return render(request, "products/detail.html", context)
+#Function Based View
+def product_detail_view(request):
+    queryset = Product.objects.all()
+    context = {
+        'object_list': queryset
+    }
+    return render(request, "products/detail.html", context)
