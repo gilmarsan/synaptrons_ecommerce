@@ -42,8 +42,6 @@ def product_detail_view(request, pk = None, *args, **kwargs):
         instance = Product.objects.get(id = pk)
     except Product.DoesNotExit:
         raise Http404("Esse produto não existe")
-    except:
-        print("Uhuhhhh!!!")
 
     context = {
         'object': instance
