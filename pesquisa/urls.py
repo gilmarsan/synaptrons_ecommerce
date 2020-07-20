@@ -2,9 +2,9 @@ from django.urls import path
 
 app_name = "pesquisa"
 
-from products.views.import(
-    ProductListView,
+from .views import(
+    PesquisaProductView,
 )
 urlpatterns = [
-    path('', ProductListView.as_view(), name='list'),
+    path('', PesquisaProductView.as_view(), name='list'),
 ]
